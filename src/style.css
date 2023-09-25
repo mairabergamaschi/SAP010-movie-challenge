@@ -1,3 +1,35 @@
+.page-title {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.page-title h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Estilos para os botões de navegação */
+.nav-button {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  margin: 15px;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 80px; 
+  height: 20px;
+}
+
+.nav-button:hover {
+  background-color: #fff;
+  color: #333;
+}
 /* Estilos para o contêiner dos cartões */
 .movie-list {
   display: flex;
@@ -14,8 +46,9 @@
   box-sizing: border-box;
 }
 .movie-item img {
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
+  justify-content: center;
 }
 
 /* Estilos para a barra de navegação */

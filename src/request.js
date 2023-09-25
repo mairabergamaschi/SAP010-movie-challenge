@@ -11,8 +11,8 @@ export async function retrieveMovieData(movieCategory) {
       case "Ação":
         apiUrl = `https://api.themoviedb.org/3/discover/movie?with_genres=28&api_key=${apiKey}`;
         break;
-      case "Comédia":
-        apiUrl = `https://api.themoviedb.org/3/discover/movie?with_genres=35&api_key=${apiKey}`;
+      case "Suspense":
+        apiUrl = `https://api.themoviedb.org/3/discover/movie?with_genres=9648&api_key=${apiKey}`;
         break;
       case "Animação":
         apiUrl = `https://api.themoviedb.org/3/discover/movie?with_genres=16&api_key=${apiKey}`;

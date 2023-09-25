@@ -10,8 +10,8 @@ function handleRouteChange() {
       case "#acao":
         retrieveMovieData("Ação");
         break;
-      case "#comedia":
-        retrieveMovieData("Comédia");
+      case "#suspense":
+        retrieveMovieData("Suspense");
         break;
       case "#animacao":
         retrieveMovieData("Animação");
