@@ -1,3 +1,9 @@
+body {
+  background-image: url('background.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
 .page-title {
   background-color: #333;
   color: white;
@@ -7,7 +13,39 @@
 
 .page-title h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 28px;
+  font-family: 'Cinzel', serif; 
+}
+
+/* Estilos para o contêiner da pesquisa */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+  align-items: center; 
+}
+
+/* Estilos para o campo de pesquisa */
+#search-input {
+  padding: 5px;
+  width: 300px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+/* Estilos para o botão de pesquisa */
+#search-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#search-button:hover {
+  background-color: #fff;
+  color: #333;
 }
 
 /* Estilos para os botões de navegação */
@@ -39,14 +77,19 @@
 
 /* Estilos para os cartões */
 .movie-item {
-  flex: 0 0 calc(33.33% - 20px);
+  flex: 0 0 calc(25% - 50px);
+  margin-top: 50px;
   margin: 10px;
   border: 1px solid #ccc;
   padding: 10px;
   box-sizing: border-box;
+  background-color: #fff;
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  color: navy;
 }
 .movie-item img {
-  max-width: 60%;
+  max-width: 100%;
   height: auto;
   justify-content: center;
 }
@@ -62,8 +105,9 @@
   font-size: 16px;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 8px 16px;
   text-decoration: none;
+  border-radius: 20px;
 }
 
 .navbar a:hover {

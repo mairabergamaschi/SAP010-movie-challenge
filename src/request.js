@@ -1,4 +1,4 @@
-export async function retrieveMovieData(movieCategory) {
+export async function retrieveMovieData(movieCategory, titleFilter = "") {
   try {
     const apiKey = "3eef915629e5dbe6ce18adf52703a7f4";
     const movieListContainer = document.getElementById("movie-list");
@@ -16,6 +16,9 @@ export async function retrieveMovieData(movieCategory) {
         break;
       case "Animação":
         apiUrl = `https://api.themoviedb.org/3/discover/movie?with_genres=16&api_key=${apiKey}`;
+        break;
+      case "Pesquisa":
+        apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(titleFilter)}`;
         break;
       default:
         console.log("Categoria não reconhecida.");
@@ -56,3 +59,12 @@ export async function retrieveMovieData(movieCategory) {
     console.error("Erro ao buscar filmes:", error);
   }
 }
+
+// Adicione um evento de clique ao botão de pesquisa
+const searchButton = document.getElementById("search-button");
+const searchInput = document.getElementById("search-input");
+
+searchButton.addEventListener("click", () => {
+  const titleFilter = searchInput.value;
+  retrieveMovieData("Pesquisa", titleFilter);
+});
